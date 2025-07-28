@@ -1,0 +1,127 @@
+---
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="About Me"
+	description="UCSD CS Student"
+	pubDate={new Date('July 27 2025')}
+>
+	<section class="about">
+		<h1>Hi, I'm Jae Hyun Cha </h1>
+		<p>
+		I'm a computer science student at UCSD. I’m mainly interested in backend development,
+		system design, and recently, machine learning.
+		</p>
+
+		<p>
+		I like working on things that are practical and useful. I enjoy building APIs,
+		working with databases, and figuring out how to structure code in a way that makes it easy to maintain later.
+		</p>
+
+		<p>
+		Lately, I’ve been trying to learn more about how machine learning can be applied to real projects,
+		especially things like recommendation systems.
+		</p>
+
+		<p>
+		Outside of coding, I like working with other people and learning from them.
+		I try to keep improving by building personal projects or helping out on team projects.
+		</p>
+	</section>
+
+	<section class="skills">
+		<h2>My Skills</h2>
+
+		<div class="skill">
+		<label>Python</label>
+		<progress value="90" max="100"></progress>
+		</div>
+		<div class="skill">
+		<label>Java</label>
+		<progress value="80" max="100"></progress>
+		</div>
+		<div class="skill">
+		<label>HTML/CSS/JS</label>
+		<progress value="85" max="100"></progress>
+		</div>
+		<div class="skill">
+		<label>Machine Learning</label>
+		<progress value="70" max="100"></progress>
+		</div>
+		<div class="skill">
+		<label>System Design</label>
+		<progress value="60" max="100"></progress>
+		</div>
+	</section>
+
+	<section class="contact">
+		<h2>Contact Me</h2>
+		<form method="POST" action="https://httpbin.org/post">
+		<label for="name">Name</label>
+		<input type="text" id="name" name="name" required />
+
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" required />
+
+		<label for="message">Message</label>
+		<textarea id="message" name="message" required></textarea>
+
+		<button type="submit">Send</button>
+		</form>
+	</section>
+
+	<style>
+		section {
+		max-width: 800px;
+		margin: 2rem auto;
+		padding: 1rem;
+		}
+
+		h1, h2 {
+		text-align: center;
+		}
+
+		.skill {
+		margin-bottom: 1rem;
+		}
+
+		.skill label {
+		display: block;
+		margin-bottom: 0.3rem;
+		}
+
+		progress {
+		width: 100%;
+		height: 1rem;
+		}
+
+		.contact form {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		}
+
+		input, textarea {
+		padding: 0.5rem;
+		font-size: 1rem;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		}
+
+		button {
+		background-color: #1a1a1e;
+		color: white;
+		border: none;
+		padding: 0.75rem;
+		font-size: 1rem;
+		cursor: pointer;
+		border-radius: 4px;
+		}
+
+		button:hover {
+		background-color: #333;
+		}
+	</style>
+</Layout>
